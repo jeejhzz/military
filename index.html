@@ -181,7 +181,7 @@ const EXCEL_FIELDS = [
 /* ============ State ============ */
 const STORAGE_KEY = 'dnotitia-research-personnel-v1';
 const SEED = [
-  { id:'c1', name:'오호빈', joinDate:'2026-07-15', dept:'R&D센터 SoC그룹 Design팀 IP Part', mtype:'', checks:{}, dates:{}, memo:'' },
+  { id:'c1', name:'오호빈', joinDate:'2026-07-15', dept:'R&D센터 SoC그룹 Design팀 Engine IP Part', mtype:'', checks:{}, dates:{}, memo:'' },
   { id:'c2', name:'박재현', joinDate:'2026-07-27', dept:'사업본부 제품개발그룹 DB팀 DB Part', mtype:'', checks:{}, dates:{}, memo:'' },
 ];
 let state = load();
@@ -324,7 +324,7 @@ function setMemo(val){
 function addCandidate(){
   const name = prompt('대상자 이름을 입력하세요.'); if(!name) return;
   const joinDate = prompt('입사 예정일 (YYYY-MM-DD)','') || '';
-  const dept = prompt('소속 (예: R&D센터 SoC그룹 Design팀 IP Part)','') || '';
+  const dept = prompt('소속 (예: R&D센터 SoC그룹 Design팀 Engine IP Part)','') || '';
   const mtype = prompt('병역 구분 (현역 / 보충역)','') || '';
   const c = { id:'c'+Date.now(), name, joinDate, dept, mtype, checks:{}, dates:{}, memo:'' };
   state.candidates.push(c); selectedId = c.id; render();
